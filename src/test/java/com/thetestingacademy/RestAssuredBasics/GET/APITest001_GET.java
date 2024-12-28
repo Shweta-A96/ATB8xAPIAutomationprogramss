@@ -1,10 +1,9 @@
-package com.thetestingacademy;
+package com.thetestingacademy.RestAssuredBasics.GET;
 
 import io.restassured.RestAssured;
 
-public class APITest001 {
-
-    public static void main(String[] args){
+public class APITest001_GET {
+    public static void main(String[] args) {
 
         //Gherkins Syntax
 
@@ -13,11 +12,11 @@ public class APITest001 {
         //base path -> /booking/1
         RestAssured
                 .given()
-                     .baseUri("https://restful-booker.herokuapp.com")
-                     .basePath("/booking/1")
+                .baseUri("https://restful-booker.herokuapp.com")
+                .basePath("/booking/1")
                 .when()
-                     .get()
+                .get()
                 .then().log().all()
-                     .statusCode(200);
+                .statusCode(200);
     }
 }
